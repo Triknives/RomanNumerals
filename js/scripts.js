@@ -3,27 +3,23 @@ var arrValues = [1000, 500, 100, 50, 10, 5, 1];
 var arrRomanized = [];
 
 function romanConvert(userInput) {
-  console.log(userInput);
-   for (i=0; i < arrRomans.length; i++);
-    if (userInput > 1000)
-      userInput - 1000;
 
+  //   for (i=0; i < arrRomans.length; i++);
+  while (userInput >= 1000) {
+    userInput = userInput - 1000
+    arrRomanized.push(arrRomans[0]);
+    if (userInput < 1000){
+      console.log(arrRomanized);
+      break;
 
-  if (userInput < 1 || userInput > 3999 || userInput === NaN) {
-    alert("not a number");
-
-  } else if (userInput === 4){
-    arrRomanized.push(arrRomans[6]);
-    arrRomanized.push(arrRomans[5]);
-    console.log(arrRomanized);
-  } else if
-    (userInput === 9) {
-    arrRomanized.push(arrRomans[6]);
-    arrRomanized.push(arrRomans[4]);
-    console.log(arrRomanized);
-
-  };
+    }
+  }
 };
+
+
+
+
+
 
 
 $(document).ready(function() {
@@ -33,3 +29,20 @@ $(document).ready(function() {
     var results = romanConvert(userInput);
   })
 });
+
+
+
+
+
+
+// if (userInput < 1 || userInput > 3999 || userInput === NaN) {
+//   alert("not a number");
+//
+// } else if (userInput === 4){
+//   arrRomanized.push(arrRomans[6]);
+//   arrRomanized.push(arrRomans[5]);
+//   console.log(arrRomanized);
+// } else if
+//   (userInput === 9) {
+//   arrRomanized.push(arrRomans[6]);
+//   arrRomanized.push(arrRomans[4]);

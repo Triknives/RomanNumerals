@@ -1,21 +1,15 @@
-
-var arrRomans = ["M", "D", "C", "L", "X", "V", "I"];
-var arrValues = [1000, 500, 100, 50, 10, 5, 1];
-var arrRomanized = [];
-
 function romanConvert(userInput) {
+  var arrRomans = ["M", "D", "C", "L", "X", "V", "I"];
+  var arrValues = [1000, 500, 100, 50, 10, 5, 1];
+  var arrRomanized ="";
+  arrValues.forEach(function(arrValue, i){
+    if (userInput > arrValue)
+    userInput = userInput - arrValue;
+    arrRomanized = arrRomanized + arrRomans[i];
 
-  while (userInput >= 1000) {
-    userInput = userInput - 1000
-    arrRomanized.push(arrRomans[0]);
-    if (userInput < 1000){
-      break;
-      arrValues.forEach(function(arrValue){
-        arrRomanized.push(arrRomans);
-
-      });
-    }
-  };
+  });
+  console.log(arrRomanized);
+  return arrRomanized;
 }
 
 
@@ -34,6 +28,10 @@ $(document).ready(function() {
 
 
 
+// while (userInput >= 1000) {
+//   userInput = userInput - 1000
+//   arrRomanized.push(arrRomans[0]);
+//   if (userInput < 1000){
 
 
 // if (userInput < 1 || userInput > 3999 || userInput === NaN) {

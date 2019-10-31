@@ -1,20 +1,22 @@
+
 var arrRomans = ["M", "D", "C", "L", "X", "V", "I"];
 var arrValues = [1000, 500, 100, 50, 10, 5, 1];
 var arrRomanized = [];
 
 function romanConvert(userInput) {
 
-  //   for (i=0; i < arrRomans.length; i++);
   while (userInput >= 1000) {
     userInput = userInput - 1000
     arrRomanized.push(arrRomans[0]);
     if (userInput < 1000){
-      console.log(arrRomanized);
       break;
+      arrValues.forEach(function(arrValue){
+        arrRomanized.push(arrRomans);
 
+      });
     }
-  }
-};
+  };
+}
 
 
 
@@ -29,7 +31,6 @@ $(document).ready(function() {
     var results = romanConvert(userInput);
   })
 });
-
 
 
 

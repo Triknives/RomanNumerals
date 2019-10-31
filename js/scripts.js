@@ -3,9 +3,13 @@ function romanConvert(userInput) {
   var arrValues = [1000, 500, 100, 50, 10, 5, 1];
   var arrRomanized ="";
   arrValues.forEach(function(arrValue, i){
-    if (userInput > arrValue)
-    userInput = userInput - arrValue;
-    arrRomanized = arrRomanized + arrRomans[i];
+    console.log(userInput > arrValue);
+    while (userInput >= arrValue) {
+      userInput -= arrValue;
+      console.log('yes');
+      arrRomanized += arrRomans[i];
+
+    }
 
   });
   console.log(arrRomanized);
